@@ -9,7 +9,6 @@ double A[MAX][MAX], x[MAX], y[MAX];
 vector<double> v1;
 vector<double> v2;
 
-
 void load(){
     /*Initialize A and x*/
     for (int i = 0; i < MAX; i++)
