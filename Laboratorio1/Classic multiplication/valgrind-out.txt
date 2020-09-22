@@ -1,0 +1,104 @@
+==32798== Memcheck, a memory error detector
+==32798== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==32798== Using Valgrind-3.16.1-36d6727e1d-20200622X and LibVEX; rerun with -h for copyright info
+==32798== Command: ./cache
+==32798== Parent PID: 30965
+==32798== 
+--32798-- 
+--32798-- Valgrind options:
+--32798--    --leak-check=full
+--32798--    --show-leak-kinds=all
+--32798--    --track-origins=yes
+--32798--    --verbose
+--32798--    --log-file=valgrind-out.txt
+--32798-- Contents of /proc/version:
+--32798--   Linux version 5.8.6-1-MANJARO (builder@db927223e331) (gcc (GCC) 10.2.0, GNU ld (GNU Binutils) 2.35) #1 SMP PREEMPT Thu Sep 3 14:19:36 UTC 2020
+--32798-- 
+--32798-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--32798-- Page sizes: currently 4096, max supported 4096
+--32798-- Valgrind library directory: /usr/lib/valgrind
+--32798-- Reading syms from /home/_srgato_/Unsa/Paralela/cache
+--32798-- Reading syms from /usr/lib/ld-2.32.so
+--32798-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--32798--    object doesn't have a dynamic symbol table
+--32798-- Scheduler: using generic scheduler lock implementation.
+==32798== Warning: set address range perms: large range [0x10e000, 0x2fc25000) (defined)
+--32798-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==32798== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-32798-by-_srgato_-on-???
+==32798== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-32798-by-_srgato_-on-???
+==32798== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-32798-by-_srgato_-on-???
+==32798== 
+==32798== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==32798== don't want to do, unless you know exactly what you're doing,
+==32798== or are doing some strange experiment):
+==32798==   /usr/lib/valgrind/../../bin/vgdb --pid=32798 ...command...
+==32798== 
+==32798== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==32798==   /path/to/gdb ./cache
+==32798== and then give GDB the following command
+==32798==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=32798
+==32798== --pid is optional if only one valgrind process is running
+==32798== 
+--32798-- REDIR: 0x2fc46ee0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580b9662 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--32798-- REDIR: 0x2fc46cb0 (ld-linux-x86-64.so.2:index) redirected to 0x580b967c (vgPlain_amd64_linux_REDIR_FOR_index)
+--32798-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--32798-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+==32798== WARNING: new redirection conflicts with existing -- ignoring it
+--32798--     old: 0x2fc46ee0 (strlen              ) R-> (0000.0) 0x580b9662 vgPlain_amd64_linux_REDIR_FOR_strlen
+--32798--     new: 0x2fc46ee0 (strlen              ) R-> (2007.0) 0x30462d90 strlen
+--32798-- REDIR: 0x2fc436c0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x30463c60 (strcmp)
+--32798-- REDIR: 0x2fc47440 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x30467450 (mempcpy)
+--32798-- Reading syms from /usr/lib/libstdc++.so.6.0.28
+--32798-- Reading syms from /usr/lib/libm-2.32.so
+--32798--    object doesn't have a symbol table
+--32798-- Reading syms from /usr/lib/libgcc_s.so.1
+--32798-- Reading syms from /usr/lib/libc-2.32.so
+--32798-- REDIR: 0x308658c0 (libc.so.6:memmove) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864db0 (libc.so.6:strncpy) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865c00 (libc.so.6:strcasecmp) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864850 (libc.so.6:strcat) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864e10 (libc.so.6:rindex) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30866fb0 (libc.so.6:rawmemchr) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x3087f500 (libc.so.6:wmemchr) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x3087f040 (libc.so.6:wcscmp) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865a20 (libc.so.6:mempcpy) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865850 (libc.so.6:bcmp) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864d40 (libc.so.6:strncmp) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864900 (libc.so.6:strcmp) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865990 (libc.so.6:memset) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x3087f000 (libc.so.6:wcschr) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864ca0 (libc.so.6:strnlen) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x308649e0 (libc.so.6:strcspn) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865c50 (libc.so.6:strncasecmp) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864980 (libc.so.6:strcpy) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865da0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30880750 (libc.so.6:wcsnlen) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x3087f080 (libc.so.6:wcscpy) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864e50 (libc.so.6:strpbrk) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x308648b0 (libc.so.6:index) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864c60 (libc.so.6:strlen) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x3086b3a0 (libc.so.6:memrchr) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865ca0 (libc.so.6:strcasecmp_l) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865810 (libc.so.6:memchr) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x3087f150 (libc.so.6:wcslen) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30864f80 (libc.so.6:strspn) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865ba0 (libc.so.6:stpncpy) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865b40 (libc.so.6:stpcpy) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30866ff0 (libc.so.6:strchrnul) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x30865cf0 (libc.so.6:strncasecmp_l) redirected to 0x304551c0 (_vgnU_ifunc_wrapper)
+--32798-- REDIR: 0x309378a0 (libc.so.6:__strrchr_avx2) redirected to 0x304627d0 (rindex)
+--32798-- REDIR: 0x30860c90 (libc.so.6:malloc) redirected to 0x3045f710 (malloc)
+--32798-- REDIR: 0x30937a70 (libc.so.6:__strlen_avx2) redirected to 0x30462c70 (strlen)
+--32798-- REDIR: 0x30934060 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x30465c50 (bcmp)
+--32798-- REDIR: 0x30932f60 (libc.so.6:__strcmp_avx2) redirected to 0x30463b60 (strcmp)
+--32798-- REDIR: 0x3053b520 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x3045fd80 (operator new(unsigned long))
+--32798-- REDIR: 0x30539750 (libstdc++.so.6:operator delete(void*, unsigned long)) redirected to 0x30461020 (operator delete(void*, unsigned long))
+--32798-- REDIR: 0x308612f0 (libc.so.6:free) redirected to 0x30460940 (free)
+==32798== 
+==32798== HEAP SUMMARY:
+==32798==     in use at exit: 0 bytes in 0 blocks
+==32798==   total heap usage: 3 allocs, 3 frees, 72,720 bytes allocated
+==32798== 
+==32798== All heap blocks were freed -- no leaks are possible
+==32798== 
+==32798== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
